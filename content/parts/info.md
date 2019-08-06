@@ -2,4 +2,4 @@
 title: info
 ---
 
-I am a front-end web developer. I used to be a web designer too, but now I concentrate on the code.
+Yet another full stack web developer [@thoughtworks](www.thoughtworks.com) Javascript, Java, Kotlin, Ruby...
