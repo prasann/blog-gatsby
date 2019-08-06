@@ -1,37 +1,16 @@
 ---
-title: Me
+title: Prologue
 ---
 
-This is a demo site of the [PersonalBlog](https://github.com/greglobinski/gatsby-starter-personal-blog) GatsbyJS starter.
+### *About me*
 
-The starter is a ready to use, easy to customize 'like theme' starter. It has everything what blog should have and some more.
+A computer science engineer, with a master's degree in software systems. Builds and runs web applications with various stacks. Self taught geek, loves to work in teams and not a 10x programmer 😕 
 
-### Standard features:
+### *About this blog*
 
-* Easy editable content in **Markdown** files (posts, pages and parts)
-* **SEO** (sitemap generation, robot.txt, meta and OpenGraph Tags)
-* **Social** sharing (Twitter, Facebook, Google, LinkedIn)
-* **Comments** (Facebook)
-* **Images** lazy loading and `webp` support (gatsby-image)
-* Post **categories** (post list filtering)
-* Full text **searching** (Algolia)
-* **Contact** form (Netlify form handling)
-* **RSS** feed
-* **PWA** (manifest.json, offline support, favicons)
-* Google **Analytics**
-* **Favicons** generator (node script)
-* **Material UI** (@next)
+This blog is a collection of my learning and experiments. Not an exhaustive list, but a fun hobby i have. Don't take these posts too seriously 😅 And i might not bother updating the old posts 🤷‍♂️ 
 
-### Advanced features:
+### *History to my blogging*
 
-* Easy customizable base **styles** via `theme` object (fonts, colors, sizes)
-* **Components** lazy loading (social sharing, comments)
-* **ESLint** (google config)
-* **Prettier** code styling
-* Custom webpack `CommonsChunkPlugin` settings
-* Webpack `BundleAnalyzerPlugin`
-* Contact **form validation** (react-material-ui-form-validator)
-
-## Instructions
-
-For detailed instructions go to [Front-end web development with Greg](https://dev.greglobinski.com/gatsby-starter-personal-blog/).
+I started of with Blogspot then moved on to Wordpress. Liked Jekyll so much, built my own workflow and was writing happily for a long time, until i met Gatsby.
+Thanks to [Greg]("https://github.com/greglobinski") for this awesome starter [theme]("https://github.com/greglobinski/gatsby-starter-personal-blog").
