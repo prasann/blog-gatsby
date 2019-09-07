@@ -10,7 +10,7 @@ A computer science engineer, with a master's degree in software systems. Builds 
 
 This blog is a collection of my learning and experiments. Not an exhaustive list, but a fun hobby i have. Don't take these posts too seriously 😅 And i might not bother updating the old posts 🤷‍♂️ 
 
-### *History to my blogging*
+#### *Blog design*
 
 I started of with Blogspot then moved on to Wordpress. Liked Jekyll so much, built my own workflow and was writing happily for a long time, until i met Gatsby.
 Thanks to [Greg]("https://github.com/greglobinski") for this awesome starter [theme]("https://github.com/greglobinski/gatsby-starter-personal-blog").

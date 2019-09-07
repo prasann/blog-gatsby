@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-personal-blog",
-  "description": "A Gatsby starter for a personal blog",
-  "author": "Greg Lobinski <greglobinski@gmail.com>",
-  "repository": "https://github.com/greglobinski/gatsby-starter-personal-blog",
-  "version": "1.1.1",
+  "name": "prasannas-blog",
+  "description": "Blog of Prasanna",
+  "author": "Prasanna Venkatesan <mail.prasanna.v@gmail.com>",
+  "repository": "https://github.com/prasann/blog",
+  "version": "1.1.2",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
