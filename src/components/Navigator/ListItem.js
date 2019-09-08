@@ -7,9 +7,10 @@ import LazyLoad from "react-lazyload";
 const styles = theme => ({
   listItem: {
     margin: "0 0 .7em 0",
+    borderBottom: `0.7px ${theme.navigator.colors.borderLineColor} solid`,
     transition: "height 1s",
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-      margin: "0 0 1.5rem 0"
+      margin: "0 0 0.5rem 0"
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
       ".moving-featured &, .is-aside &": {
@@ -65,7 +66,7 @@ const styles = theme => ({
     }
   },
   listItemText: {
-    margin: "0 0 0 1.5em",
+    margin: "0 0 0 0.5em",
     flexGrow: 1,
     display: "flex",
     flexDirection: "column",
@@ -90,10 +91,11 @@ const styles = theme => ({
       }
     },
     "& h2": {
-      lineHeight: 1.2,
+      lineHeight: "initial",
       display: "block",
       fontSize: `${theme.navigator.sizes.postsListItemH2Font}em`,
       margin: ".3em 0 0 0",
+      color: `${theme.navigator.colors.postsSubTitle}`,
       [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
         fontSize: `${theme.navigator.sizes.postsListItemH2Font *
           theme.navigator.sizes.fontIncraseForM}em`
