@@ -1,13 +1,13 @@
-import { JssProvider } from "react-jss";
-import { Provider } from "react-redux";
-import { renderToString } from "react-dom/server";
-import React from "react";
+const React = require("react");
+const { Provider } = require("react-redux");
+const { JssProvider } = require("react-jss");
+const { renderToString } = require("react-dom/server");
 
 require("dotenv").config();
 
-import getPageContext from "./src/getPageContext";
-import createStore from "./src/state/store";
-import theme from "./src/styles/theme";
+const getPageContext = require("./src/getPageContext");
+const createStore = require("./src/state/store");
+const theme = require("./src/styles/theme");
 
 exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) => {
   const pageContext = getPageContext();
@@ -15,7 +15,7 @@ exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadCompon
 
   replaceBodyHTMLString(
     renderToString(
-      <Provider store={store}>
+      <Provider store={store} >
         <JssProvider
           registry={pageContext.sheetsRegistry}
           generateClassName={pageContext.generateClassName}
@@ -23,8 +23,8 @@ exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadCompon
           {React.cloneElement(bodyComponent, {
             pageContext
           })}
-        </JssProvider>
-      </Provider>
+        </JssProvider >
+      </Provider >
     )
   );
 

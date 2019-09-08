@@ -1,5 +1,4 @@
 const webpack = require("webpack");
-//const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const _ = require("lodash");
 const Promise = require("bluebird");
 const path = require("path");
@@ -72,7 +71,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   });
 };
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
+exports.onCreateWebpackConfig = ({ config, stage }) => {
   switch (stage) {
     case "build-javascript":
       {
@@ -109,9 +108,11 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
   return config;
 };
 
-exports.modifyBabelrc = ({ babelrc }) => {
-  return {
-    ...babelrc,
-    plugins: babelrc.plugins.concat([`syntax-dynamic-import`, `dynamic-import-webpack`])
-  };
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPlugin({
+    name: `babel-plugin-syntax-dynamic-import`
+  });
+  actions.setBabelPlugin({
+    name: `babel-plugin-dynamic-import-webpack`
+  });
 };

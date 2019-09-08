@@ -85,7 +85,7 @@ const styles = theme => ({
         fontSize: `${theme.navigator.sizes.postsListItemH1Font *
           theme.navigator.sizes.fontIncraseForL}em`,
         ".moving-featured &, .is-aside &": {
-          fontSize: "1em",
+          fontSize: "1em",gatsby-browser.js
           fontWeight: 400
         }
       }
