@@ -14,7 +14,8 @@ const styles = theme => ({
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
       ".moving-featured &, .is-aside &": {
-        margin: "0 0 0 0"
+        margin: "0 0 0 0",
+        borderBottom: "none",
       }
     }
   },

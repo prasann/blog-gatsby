@@ -2,4 +2,4 @@
 title: footnote
 ---
 
-* personal blog of Prasanna
+* rants and writings through personal experience

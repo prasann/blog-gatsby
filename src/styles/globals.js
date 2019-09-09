@@ -378,6 +378,13 @@ export default {
       textShadow: "none",
       padding: "1px 5px",
       borderRadius: "2px"
+    },
+    "code[class*='language-'],pre[class*='language-']": {
+      fontSize: "0.9em"
+    },
+    "pre[class*='language-']": {
+      padding: "0.5em"
     }
+
   }
 };

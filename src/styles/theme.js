@@ -49,7 +49,7 @@ const theme = createMuiTheme({
       postsListItemLinkHover: colors.accent,
       postsHeader: colors.dark,
       postsSubTitle: colors.gray,
-      borderLineColor: colors.lightGray
+      borderLineColor: colors.superLightGray
     },
     sizes: {
       closedHeight: 80,
@@ -78,16 +78,16 @@ const theme = createMuiTheme({
     },
     fonts: {
       title: {
-        size: 1.9,
-        sizeM: 2.5,
-        sizeL: 2.7,
+        size: 1.8,
+        sizeM: 2,
+        sizeL: 2.2,
         weight: 600,
         lineHeight: 1.1
       },
       subTitle: {
-        size: 1.5,
-        sizeM: 1.8,
-        sizeL: 1.95,
+        size: 1.2,
+        sizeM: 1.4,
+        sizeL: 1.6,
         weight: 300,
         lineHeight: 1.1
       },
