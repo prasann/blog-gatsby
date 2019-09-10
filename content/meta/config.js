@@ -5,7 +5,7 @@ module.exports = {
   shortSiteTitle: "personal blog", // <title> ending for posts and pages
   siteDescription: "Random presence of my thoughts and learning...",
   siteUrl: "https://prasans.info",
-  pathPrefix: "",
+  pathPrefix: "blog-gatsby",
   siteImage: "preview.jpg",
   siteLanguage: "en",
   // author
