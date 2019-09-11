@@ -2,7 +2,7 @@
 title: Card slider using CSS Keyframes
 subTitle: Slider animation using css keyframes
 postDescription: Slider animation using css keyframes
-category: Tech,CSS,Animation
+category: CSS
 ---
 [CSS Keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/%40keyframes) is a powerful feature to create animations in CSS.
 
