@@ -8,7 +8,7 @@ A computer science engineer, with a master's degree in software systems. Builds 
 
 ### *About this blog*
 
-This blog is a collection of my learning and experiments. Not an exhaustive list, but a fun hobby i have. Don't take these posts too seriously 😅 And i might not bother updating the old posts 🤷‍♂️ 
+This blog is a collection of my learning and experiments. Not an exhaustive list, but a fun hobby I have. Don't take these posts too seriously 😅 And I might not bother updating the old posts 🤷‍♂️ 
 
 #### *Blog design*
 

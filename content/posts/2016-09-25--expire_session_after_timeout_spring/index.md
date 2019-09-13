@@ -2,7 +2,7 @@
 title: Spring security session timeouts
 subTitle: Setup session timeouts in spring security. This will explain how to setup the idle timeout and also the max timeout for separate sessions.
 postDescription: Setup session timeouts in spring security. This will explain how to setup the idle timeout and also the max timeout for separate sessions.
-category: Tech,Java,Spring
+category: Java
 ---
 Using Spring security we were building an application which has 2 types of users Internal and External. Our requirement was
 

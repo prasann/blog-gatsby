@@ -1,16 +1,16 @@
 ---
 title: Add EditText(s) dynamically and retrieve values - Android
-menuTitle: Add EditText(s) dynamically and retrieve values - Android
-subTitle: Adding multiple edit text boxes to the android application dynamically through code and controlling them.
+subTitle: Dynamic construction of Android layouts.
 postDescription: Adding multiple edit text boxes to the android application dynamically through code and controlling them.
-category: Android,Tech
+category: Android
 ---
 Adding EditText to your Android application is no different from adding any other form elements except for one thing. Retrieving values from them is slightly different and of course nothing impossible. Just a little more bit of coding and thats it.
 
- [![Android-EditText](/assets/images/posts/add-edit-text-dynamically-android/thumbs/img1.png)](/assets/images/posts/add-edit-text-dynamically-android/full/img1.png "Android-EditText") 
+ [![Android-EditText](./img1.png)]("Android-EditText") 
 
 Following code snippet creates a series of EditTexts and also let you to access its values.  
 
+```java
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -107,3 +107,4 @@ public class Sample extends Activity {
         return editText;
     }
 }
+```
