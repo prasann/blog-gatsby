@@ -8,7 +8,6 @@ import Content from "../Main/Content";
 const Page = props => {
   const { page } = props;
   const html = (page || {}).html;
-  console.log("Page", page)
 
   return (
     <Article>
