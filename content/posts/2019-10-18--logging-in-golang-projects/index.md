@@ -1,3 +1,10 @@
+---
+title: Logging in Golang projects
+subTitle: Writing a generic log layer log common log information.
+postDescription: A log abstraction in go-lang projects, that can then be used to log common information. This also hides the log library inclusion, making it easier to swap out the library for a different one.
+category: Go
+---
+
 Logging in golang projects
 
 One of the common requirement in any project is to have some additional context while logging. And most of us aren't consuming the logs directly these days.
@@ -9,7 +16,7 @@ In our case, we were using splunk and we have built a lots of dashboards based o
 Here is the post describing how we achieved it using go-lang.
 
 
-## Setting up a log layer
+## Setting up an abstraction for logging
 
 We decided to go with logrus as our logging library. Instead of using and importing logrus in all the places, we wrote a layer of abstraction.
 
@@ -37,7 +44,6 @@ func getCallerInfo() string {
 	}
 }
 ```
-```
 
 
 Here is our abstraction layer.
@@ -61,11 +67,10 @@ type Fields map[string]interface{}
 const (
 	contextLogTag     string = "ContextLogTag"
 	errorLogTag       string = "ErrorLogTag"
-	deviceLogTag      string = "TillID"
-	environmentLogTag string = "TillEnv"
+	deviceLogTag      string = "Device ID"
 )
 
-var tillDLogEntry *logrus.Entry
+var logEntry *logrus.Entry
 
 func Setup() {
 	level, err := logrus.ParseLevel("<<loglevel from env>>")
@@ -79,7 +84,7 @@ func Setup() {
 	}
 	logger.Formatter = &logrus.JSONFormatter{}
 
-	tillDLogEntry = logger.WithFields(logrus.Fields{
+	logEntry = logger.WithFields(logrus.Fields{
 		deviceLogTag:      "<<deviceId from env>>",
 	})
 }
@@ -88,10 +93,10 @@ func Error(errMessage string, err error, fields map[string]interface{}) {
 
 	if fields != nil {
 		for key, val := range fields {
-			tillDLogEntry = tillDLogEntry.WithField(key, val)
+			logEntry = logEntry.WithField(key, val)
 		}
 	}
-	tillDLogEntry.
+	logEntry.
 		WithField(contextLogTag, getCallerInfo()).
 		WithField(errorLogTag, err).
 		Error(errMessage)
@@ -100,10 +105,10 @@ func Error(errMessage string, err error, fields map[string]interface{}) {
 func Fatal(errMessage string, err error, fields map[string]interface{}) {
 	if fields != nil {
 		for key, val := range fields {
-			tillDLogEntry = tillDLogEntry.WithField(key, val)
+			logEntry = logEntry.WithField(key, val)
 		}
 	}
-	tillDLogEntry.
+	logEntry.
 		WithField(contextLogTag, getCallerInfo()).
 		WithField(errorLogTag, err).
 		Fatal(errMessage)
@@ -112,19 +117,19 @@ func Fatal(errMessage string, err error, fields map[string]interface{}) {
 func Info(msg string, fields map[string]interface{}) {
 	if fields != nil {
 		for key, val := range fields {
-			tillDLogEntry = tillDLogEntry.WithField(key, val)
+			logEntry = logEntry.WithField(key, val)
 		}
 	}
-	tillDLogEntry.WithField(contextLogTag, getCallerInfo()).Info(msg)
+	logEntry.WithField(contextLogTag, getCallerInfo()).Info(msg)
 }
 
 func Warn(fields map[string]interface{}, args ...interface{}) {
 	if fields != nil {
 		for key, val := range fields {
-			tillDLogEntry = tillDLogEntry.WithField(key, val)
+			logEntry = logEntry.WithField(key, val)
 		}
 	}
-	tillDLogEntry.Warn(args...)
+	logEntry.Warn(args...)
 }
 
 func getCallerInfo() string {
@@ -137,7 +142,6 @@ func getCallerInfo() string {
 		return ""
 	}
 }
-````
 ```
 
 
