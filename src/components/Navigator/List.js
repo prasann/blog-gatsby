@@ -60,6 +60,7 @@ class List extends React.Component {
       removeFilter
     } = this.props;
 
+    const publishedPosts = posts && posts.filter(p => !p.node.frontmatter.draft);
     return (
       <div className={classes.posts}>
         <SpringScrollbars forceCheckOnScroll={true} isNavigator={true}>
@@ -71,8 +72,8 @@ class List extends React.Component {
               removeFilter={removeFilter}
             />
             <ul className={classes.list}>
-              {posts &&
-                posts.map((post, i) => (
+              {publishedPosts &&
+                publishedPosts.map((post, i) => (
                   <ListItem
                     key={i}
                     post={post}

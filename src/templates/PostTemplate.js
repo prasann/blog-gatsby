@@ -77,6 +77,7 @@ export const postQuery = graphql`
             }
           }
         }
+        draft
       }
     }
     author: markdownRemark(id: { regex: "/author/" }) {

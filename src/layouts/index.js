@@ -138,6 +138,7 @@ export const guery = graphql`
             title
             subTitle
             category
+            draft
             cover {
               children {
                 ... on ImageSharp {

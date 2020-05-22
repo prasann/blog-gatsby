@@ -3,6 +3,7 @@ title: Centralized error handling in Express applications.
 subTitle: Custom error handler to handle the exceptions and way to hook it into express applciation 
 postDescription: Handling exceptions in an express application, responding back with standard error response.
 category: node
+draft: true
 ---
 
 This post explains a way to centralize all the error handling for [express](https://expressjs.com/) application. 
