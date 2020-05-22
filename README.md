@@ -1,5 +1,6 @@
 ## Personal blog
 
-Powered using Gatsby.
+Source for the blog hosted in https://prasans.info
 
-Blog template from: https://gatsby-starter-personal-blog.greglobinski.com/
+
+_Powered using Gatsby._

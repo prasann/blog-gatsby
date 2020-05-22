@@ -5,8 +5,6 @@ postDescription: A log abstraction in go-lang projects, that can then be used to
 category: Go
 ---
 
-Logging in golang projects
-
 One of the common requirement in any project is to have some additional context while logging. And most of us aren't consuming the logs directly these days.
 We use either ELK stack or some other proprietary tools to consume the logged information.
 In these cases, it's important to know where those logs specifically came from and also important to log it in a format that's easy to parse and index.
