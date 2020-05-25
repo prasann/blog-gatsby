@@ -3,6 +3,7 @@ title: Logging in Golang projects
 subTitle: Writing a generic log layer log common log information.
 postDescription: A log abstraction in go-lang projects, that can then be used to log common information. This also hides the log library inclusion, making it easier to swap out the library for a different one.
 category: Go
+draft: false
 ---
 
 One of the common requirement in any project is to have some additional context while logging. And most of us aren't consuming the logs directly these days.
