@@ -22,12 +22,23 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run build
-      
+
+    - name: Installing dependencies 🕐
+      run: npm install
+
+    - name: Building Gatsby app 🗼
+      run: npm run build
+      env:
+        - GOOGLE_ANALYTICS_ID: ${{secrets.GOOGLE_ANALYTICS_ID}}
+        - ALGOLIA_APP_ID: ${{secrets.ALGOLIA_APP_ID}}
+        - ALGOLIA_SEARCH_ONLY_API_KEY: ${{secrets.ALGOLIA_SEARCH_ONLY_API_KEY}}
+        - ALGOLIA_ADMIN_API_KEY: ${{secrets.ALGOLIA_ADMIN_API_KEY}}
+        - ALGOLIA_INDEX_NAME: "prasanna-blog"
+        - FB_APP_ID: ${{secrets.FB_APP_ID}}
+
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: public  
+        FOLDER: public
