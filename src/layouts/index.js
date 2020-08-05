@@ -139,15 +139,6 @@ export const guery = graphql`
             subTitle
             category
             draft
-            cover {
-              children {
-                ... on ImageSharp {
-                  resolutions(width: 90, height: 90) {
-                    ...GatsbyImageSharpResolutions_withWebp_noBase64
-                  }
-                }
-              }
-            }
           }
         }
       }
