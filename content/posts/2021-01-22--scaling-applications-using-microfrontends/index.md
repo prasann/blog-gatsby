@@ -57,7 +57,7 @@ From monoliths, the best choice to evolve the backend services as microservices.
 
 However, most of the microservices I have seen are as follows
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/nuebx9g3wdu3majah2vb.png)
+![Microservices](./Twitter_post_-_2.png)
 
 > Independent deployments ! == Independent releases
 
@@ -67,7 +67,7 @@ Teams are able to develop and deploy backends independently. However, they need 
 
 Micro-frontends are nothing but taking the concept of micro-services to the frontend. Slice the frontend of the application to respect the module boundaries of the backend, and create an end-end independent release path.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/9d2qmlu0vjmlmewy8okz.png)
+![Microfrontends](./Twitter_post_-_3.png)
 
 > All of Microservices' promises + Independent releases
 
@@ -104,7 +104,7 @@ Apart from the 3 services - configure, search, and order, I will have another se
 
 Composing multiple frontends into a single application is one of the first problems that needs solving when choosing micro-frontends.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/kjkuca7j5cmgwv1xrv2j.png)
+![Composing frontends into single app](./Twitter_post_-_4.png)
 
 **Composing front-ends**
 
@@ -114,7 +114,7 @@ We can achieve this composition in 2 ways, let's go over the pros and cons of th
 
 **Build-time composition** is where multiple frontend applications are built as a single big application and served. This can be accomplished using **npm** or **yarn** packages.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/oti842ift4lgax80gzx4.png)
+![Build time composition](./build-time-composition.png)
 
 **Pros:**
 
@@ -128,7 +128,7 @@ We can achieve this composition in 2 ways, let's go over the pros and cons of th
 
 **A Run-time composition** is where the frontends get integrated into the browser directly when the user requests a page. This may be done on the "Server-Side" or in the "Client-Side"
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/32r5lsxq4maapemmdfyw.png)
+![Run-time composition](./run_time_frontend_composition_f5076854e1.png)
 
 **Pros:**
 
@@ -163,13 +163,13 @@ Multiple frontends need to share data with each other. Though this needs to be m
 
 A global store in the application and all frontends using the same library to access the store.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/nnarg5aev72kj3giaw6x.png)
+![State management tools](./state_management_tools_604f976fa9.png)
 
 - **Window events**
 
 Another approach could be to utilize the window (DOMs) eventing capability. Below is a sample event.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/rjirff7pj01uas07g1gu.png)
+![Window events](./window_events_46783b22ad.png)
 
 ***We used to communicate through common redux store and redux events as all the apps in our micro-frontends were using Redux.***
 
@@ -179,17 +179,17 @@ One of the hardest problem to solve for is design consistency.
 
 In our team, we addressed this challenge by forming guilds. Consider that there are three teams, and each team has a designer assigned to it.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/0gdgsukkbzw6e1ok7nzc.png)
+![Actual team structure](./Twitter_post_-_5.png)
 
 We formed a guild comprising of all designers and some interested developers. They encompass a virtual team. They take all the design decisions and make sure their respective teams are abiding by the central design tenets.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/f2gurgtccs3kcmmrn941.png)
+![Guild1](./Twitter_post_-_6.png)
 
 Initially, the guild created a style guide for the application. Mainly CSS and the application teams copy-pasted it from the style guide to build components.
 
 As we developed more features, we started pulling out Higher-order JS components and made them sharable. This is more of an evolution and works well once you have a stable design system in place.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/i9ods0luts42xf037th4.png)
+![Styleguide](./Twitter_post_-_7.png)
 
 And also, since the teams were using the same frontend framework (React) it was easier for us to build this component library.
 
@@ -203,7 +203,7 @@ Primarily we will be discussing the "Integration tests" and "Functional tests" f
 
 Having a lightweight "Consumer Driven Contracts" (CDC) helped us a lot.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/6ougrsukadzdp0zuixsn.png)
+![Integration tests](./testing_strategy_1776956c37.png)
 
 A CDC is where the consumer services' give some tests to the provider service. A provider has to run all of its consumer services before publishing an artifact for deployment.
 
@@ -211,13 +211,13 @@ This doesn't need to be very complex and can be done quickly using some lightwei
 
 In our scenario, Frame was the consumer of all the services and it shared a simple JSON contract and a small JS test with all of its providers. This ensured that the frame wasn't broken when a service deployed automatically.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/pmwz1mfgqeyxdc0ojfwc.png)
+![Frame test](./sample_of_frames_contract_025a143c30.png)
 
 - **Functional tests**
 
 This is one of my least favorite testing methods, however, like everything else in tech, it does have some staunch supporters and followers. In our case, we only had a few critical and successful user journeys automated using Selenium for functional testing.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/3pyn3j490o6xmswmuyjm.png)
+![Functional tests](./functional_tests_6cdcf7c24a.png)
 
 These journeys cut across multiple services and hence are harder to develop and maintain. Some of the FAQs I usually get on these tests are
 
