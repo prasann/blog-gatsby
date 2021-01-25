@@ -3,6 +3,7 @@ title: Scaling Applications Using Micro-Frontends
 subTitle: A checklist of problems that require solving while starting a microfrontend application. 
 postDescription: When starting a project with Micro-Frontends, here are some typical problem that require solving and some possible solutions.
 category: javascript
+noIndex: true
 ---
 
 > *Cross posted from [Archimydes blog] (https://archimydes.dev/fourthact/blog/scaling-applications-using-micro-frontends)*
