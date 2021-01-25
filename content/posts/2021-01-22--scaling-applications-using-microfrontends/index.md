@@ -18,7 +18,7 @@ I'll start by introducing the pattern of Micro-frontends first. Then we'll be lo
 
 ## **1. Scaling Applications**
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/t05e2wbqpej8kmbsokwu.png)
+![Scaling applications](./Twitter_post_-_1.png)
 
 In general, scaling applications implies scaling backend applications to serve an increasing number of users. Usually, it's about how to:
 
