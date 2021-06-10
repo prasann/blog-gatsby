@@ -5,7 +5,7 @@ postDescription: This post summarizes the 2 patterns of saga and explains a even
 category: architecture
 ---
 
-> *Cross posted from [Dev.to blog] *
+> *Cross posted from [Dev.to blog] (https://dev.to/prasann/micro-services-patterns-saga-to-music-or-to-dance-4hio)*
 
 ## What is a Saga pattern
 
