@@ -1,5 +1,5 @@
 ---
-title: Micro-services Patterns: Saga - to music or to dance?
+title: Micro-services Patterns. Saga - to music or to dance?
 subTitle:  Saga pattern is useful to trace a distributed transaction across various micro-services.
 postDescription: This post summarizes the 2 patterns of saga and explains a event storming for a sample use-case
 category: architecture
